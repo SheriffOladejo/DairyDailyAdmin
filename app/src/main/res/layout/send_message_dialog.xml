@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/message_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message To Sheriff: "
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp" />
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Message"
+        android:paddingStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Send"
+        android:textSize="16sp"
+        android:background="@color/lightgray"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:elevation="2dp"
+        android:background="@drawable/rectangle_border"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/all_customers"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:elevation="2dp"
+        android:background="@drawable/rectangle_border"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Customers"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/total_entries"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:elevation="2dp"
+        android:background="@drawable/rectangle_border"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Entries"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/send_message"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:elevation="2dp"
+        android:background="@drawable/rectangle_border"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send Message"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/payment_history"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:elevation="2dp"
+        android:background="@drawable/rectangle_border"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment History"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/upload_rate_file"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:elevation="2dp"
+        android:background="@drawable/rectangle_border"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Rate File"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:elevation="2dp"
+        android:background="@drawable/rectangle_border"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete Account"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
