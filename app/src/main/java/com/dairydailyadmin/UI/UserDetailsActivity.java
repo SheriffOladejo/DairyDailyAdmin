@@ -86,36 +86,37 @@ public class UserDetailsActivity extends AppCompatActivity {
                 yes.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        FirebaseAuth.getInstance().signInWithEmailAndPassword(getIntent().getStringExtra("email"), getIntent().getStringExtra("password")).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(task.isSuccessful()){
-                                    final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                                    user.unlink(user.getProviderId()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<AuthResult> task) {
-                                            if(task.isSuccessful()){
-                                                Toast.makeText(UserDetailsActivity.this, "Phone number deleted", Toast.LENGTH_LONG).show();
-                                            }
-                                            else{
-                                                Toast.makeText(UserDetailsActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
-                                            }
-                                        }
-                                    });
-                                    user.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<Void> task) {
-                                            if(task.isSuccessful()){
-                                                Toast.makeText(UserDetailsActivity.this, "User deleted successfully", Toast.LENGTH_LONG).show();
-                                            }
-                                        }
-                                    });
-                                }
-                            }
-                        });
+//                        FirebaseAuth.getInstance().signInWithEmailAndPassword(getIntent().getStringExtra("email"), getIntent().getStringExtra("password")).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                            @Override
+//                            public void onComplete(@NonNull Task<AuthResult> task) {
+//                                if(task.isSuccessful()){
+//                                    final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//                                    user.unlink(user.getProviderId()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                                        @Override
+//                                        public void onComplete(@NonNull Task<AuthResult> task) {
+//                                            if(task.isSuccessful()){
+//                                                Toast.makeText(UserDetailsActivity.this, "Phone number deleted", Toast.LENGTH_LONG).show();
+//                                            }
+//                                            else{
+//                                                Toast.makeText(UserDetailsActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+//                                            }
+//                                        }
+//                                    });
+//                                    user.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+//                                        @Override
+//                                        public void onComplete(@NonNull Task<Void> task) {
+//                                            if(task.isSuccessful()){
+//                                                Toast.makeText(UserDetailsActivity.this, "User deleted successfully", Toast.LENGTH_LONG).show();
+//                                            }
+//                                        }
+//                                    });
+//                                }
+//                            }
+//                        });
 
-                        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users").child(getIntent().getStringExtra("mobile_no"));
-                        ref.removeValue();
+                        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users").child(getIntent().getStringExtra("mobile_no")).child("Active");
+                        ref.setValue("false");
+                        Toast.makeText(UserDetailsActivity.this, "User suspended", Toast.LENGTH_LONG).show();
                         dialog.dismiss();
                         startActivity(new Intent(UserDetailsActivity.this, MainActivity.class));
                         finish();

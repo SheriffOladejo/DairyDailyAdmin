@@ -21,15 +21,17 @@ import java.util.List;
 
 public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder> implements Filterable {
 
-    private ArrayList<UsersModel> list;
-    private ArrayList<UsersModel> listFull;
+    private static ArrayList<UsersModel> list;
+    private static ArrayList<UsersModel> listFull;
     Context context;
+    private static int number = 0;
 
     public UsersAdapter(Context context, ArrayList<UsersModel> list){
         this.context = context;
         this.list = list;
         Log.d("UsersAdapter", "list: " + list.size());
         listFull = new ArrayList<>(list);
+        number = list.size()+1;
     }
 
     public UsersAdapter(){}

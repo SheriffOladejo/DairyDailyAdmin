@@ -53,9 +53,9 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<UsersModel> list= new ArrayList<>();
-    UsersAdapter adapter;
-    RecyclerView recyclerView;
+    static ArrayList<UsersModel> list= new ArrayList<>();
+    static UsersAdapter adapter;
+    static RecyclerView recyclerView;
     ProgressBar progressBar;
     FloatingActionButton upload_chart;
     Button selectFile, uploadFile;
